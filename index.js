@@ -8,8 +8,7 @@ function iterative(n) {
       thisN;
 
   for (thisN = 2; thisN < n; ++thisN) {
-    vals.push(vals[0] + vals[1]);
-    vals.shift();
+    vals.push(vals.shift() + vals[0]);
   }
 
   return vals.pop();
