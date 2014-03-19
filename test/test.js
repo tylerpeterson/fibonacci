@@ -1,7 +1,7 @@
 var fib = require('../index'),
     expect = require('chai').expect,
     referenceFibSequence = [1, 1, 2, 3, 5, 8, 13, 21, 34],
-    implementationNames = ['recursive', 'iterative'];
+    implementationNames = ['recursive', 'iterative', 'cachedIterative'];
 
 implementationNames.forEach(function (implName) {
   describe('the ' + implName + ' implementation', function () {

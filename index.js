@@ -14,7 +14,18 @@ function iterative(n) {
   return vals.pop();
 }
 
+function cachedIterative(n) {
+  var sequence = [1, 1];
+
+  while (sequence.length < n) {
+    sequence.push(sequence[sequence.length - 1] + sequence[sequence.length - 2]);
+  }
+
+  return sequence[sequence.length - 1];
+}
+
 module.exports = {
   recursive: recursive,
-  iterative: iterative
+  iterative: iterative,
+  cachedIterative: cachedIterative
 };
